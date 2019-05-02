@@ -38,12 +38,12 @@
 
 
 (defvar gdscript-font-lock-keywords
-  `((,(concat "\\<"
+  `((,(concat "\\_<"
               (regexp-opt '("if" "elif" "else" "for" "do" "while" "switch" "case"
 	                    "break" "continue" "pass" "return" "class" "extends" "tool"
 	                    "signal" "func" "static" "const" "enum" "var" "onready"
 	                    "export" "setget" "breakpoint"))
-              "\\>")
+              "\\_>")
      . font-lock-keyword-face)
     ("func +\\([A-Za-z0-9_]+\\)" (1 font-lock-function-name-face))
     ("\\([A-Za-z0-9_.]+\\)\s*=" (1 font-lock-variable-name-face))))
